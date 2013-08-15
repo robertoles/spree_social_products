@@ -1,11 +1,13 @@
 <div id="social_nav">
   <h6><%= t(:bookmark_or_share_this) %></h6>
-  <ul>
-    <% if Spree::Config.twitter_button %>
-      <li class="twitter">
-        <%= render :partial => 'spree/social/twitter' %>
+  <ul class="facebook-like-button">
+    <% if Spree::Config.facebook_button %>
+      <li class="facebook">
+        <%= render :partial => 'spree/social/facebook' %>
       </li>
     <% end %>
+  </ul>
+  <ul>
     <% if Spree::Config.pinterest_button %>
       <li class="pinterest">
         <%= render :partial => 'spree/social/pinterest' %>
@@ -31,11 +33,9 @@
         <%= render :partial => 'spree/social/gplus' %>
       </li>
     <% end %>
-  </ul>
-  <ul class="facebook-like-button">
-    <% if Spree::Config.facebook_button %>
-      <li class="facebook">
-        <%= render :partial => 'spree/social/facebook' %>
+    <% if Spree::Config.twitter_button %>
+      <li class="twitter">
+        <%= render :partial => 'spree/social/twitter' %>
       </li>
     <% end %>
   </ul>

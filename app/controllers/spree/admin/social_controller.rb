@@ -6,6 +6,7 @@ module Spree
       end
 
       def update
+        Spree::Config[:facebook_app_id] = params[:social].delete(:facebook_app_id)
         params[:social].each do |provider, value|
           if value == '1'
             Spree::Config["#{provider}_button"] = true

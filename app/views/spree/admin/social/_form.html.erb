@@ -44,6 +44,12 @@
     </li>
   </ul>
 
+  <div>
+    <%= image_tag 'social/facebook_16.png' %>
+    <%= label_tag 'social[facebook_app_id]', 'Facebook App ID' %>
+    <%= text_field_tag 'social[facebook_app_id]', Spree::Config.facebook_app_id %>
+  </div>
+
   <div id="social_actions">
     <%= submit_tag 'Update' %>
   </div>
